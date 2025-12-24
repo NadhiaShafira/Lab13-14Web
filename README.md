@@ -40,7 +40,7 @@ Membuktikan bahwa tombol navigasi berfungsi untuk melihat data di halaman beriku
 
 Proses memfilter data berdasarkan kata kunci yang dimasukkan oleh user.
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/47037fb893558fb8e5e330c454c165c8f71e4aea/ss_prak13/03-uji-fitur-pencarian.png)
 
 # 4. 🔗 Pencarian Berkelanjutan (Halaman Selanjutnya dalam Mode Cari)
 
