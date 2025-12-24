@@ -46,7 +46,7 @@ Proses memfilter data berdasarkan kata kunci yang dimasukkan oleh user.
 
 Menunjukkan bahwa saat berpindah halaman, hasil pencarian tetap tersimpan (Query String tetap ada di URL).
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/4116b6d29154fd40a4ff023ff5024a07a8705d40/ss_prak13/04-pencarian-halaman-berikutnya.png)
 
 # 5. 🚫 Kondisi Data Tidak Ditemukan
 
