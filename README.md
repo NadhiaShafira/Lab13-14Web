@@ -52,4 +52,4 @@ Menunjukkan bahwa saat berpindah halaman, hasil pencarian tetap tersimpan (Query
 
 Handling jika user mencari kata kunci yang tidak ada di dalam database.
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/a10f1a0a13243c318c8de3a548b5f1c37a46ecf0/ss_prak13/05-data-kosong.png)
