@@ -34,7 +34,7 @@ Menunjukkan halaman awal artikel yang sudah dibatasi jumlah datanya.
 
 Membuktikan bahwa tombol navigasi berfungsi untuk melihat data di halaman berikutnya.
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/38b3a792dc540b65231c2aa49a1b5e4f72508f0f/ss_prak13/02-navigasi-halaman.png)
 
 # 3. 🔍 Fitur Pencarian (Searching)
 
