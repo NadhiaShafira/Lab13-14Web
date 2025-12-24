@@ -28,7 +28,7 @@ Pada praktikum ini, saya mengimplementasikan fitur pembagian halaman (pagination
 
 Menunjukkan halaman awal artikel yang sudah dibatasi jumlah datanya.
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/67283e81e980e2802d7929079ea60b8fba21c71d/ss_prak13/01-tampilan-index-pagination.png)
 
 # 2. ⏭️ Navigasi Halaman (Next/Halaman 2)
 
