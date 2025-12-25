@@ -1,17 +1,24 @@
 <?php
 $db = new Database();
 
-// 1. LOGIKA PENCARIAN (Searching)
-$q = isset($_GET['q']) ? $_GET['q'] : "";
+// --- 1. LOGIKA PENCARIAN (Sesuai Praktikum 14 Halaman 2) ---
+$q = "";
 $where = "";
-if (!empty($q)) {
+
+// Cek apakah tombol submit ditekan dan input q tidak kosong
+if (isset($_GET['submit']) && !empty($_GET['q'])) {
+    $q = $_GET['q'];
+    $where = " WHERE judul LIKE '%{$q}%' ";
+} elseif (!empty($_GET['q'])) { 
+    // Ini tambahan agar saat pindah halaman (pagination), filter q tetap jalan
+    $q = $_GET['q'];
     $where = " WHERE judul LIKE '%{$q}%' ";
 }
 
-// 2. LOGIKA PAGINATION (Disesuaikan dengan Pencarian)
-$per_page = 2; // Jumlah data per halaman
+// --- 2. LOGIKA PAGINATION ---
+$per_page = 2; 
 
-// Hitung total data (Filter dengan WHERE jika ada pencarian)
+// Hitung total data dengan filter WHERE
 $sql_count = "SELECT COUNT(*) FROM artikel" . $where;
 $result_count = $db->query($sql_count);
 $r_data = $result_count->fetch_row();
@@ -22,7 +29,7 @@ $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 if ($page < 1) $page = 1;
 $offset = ($page - 1) * $per_page;
 
-// Query utama dengan WHERE dan LIMIT
+// Query utama dengan filter dan limit
 $sql_data = "SELECT * FROM artikel" . $where . " LIMIT {$offset}, {$per_page}";
 $query = $db->query($sql_data);
 ?>
@@ -30,15 +37,16 @@ $query = $db->query($sql_data);
 <h3>🍜 Data Artikel</h3>
 
 <div class="card">
-    <form action="" method="get" style="margin-bottom: 20px;">
-        <label for="q">Cari data: </label>
-        <input type="text" id="q" name="q" value="<?= htmlspecialchars($q); ?>" placeholder="Masukkan judul...">
-        <input type="submit" value="Cari" class="btn btn-primary">
-    </form>
-
+    
     <a href="/lab11_php_oop/artikel/tambah" class="action-link" style="display:inline-block; margin-bottom:15px;">
         ➕ Tambah Artikel
     </a>
+
+    <form action="" method="get" style="margin-bottom: 20px;">
+        <label for="q">Cari data: </label>
+        <input type="text" id="q" name="q" class="input-q" value="<?= htmlspecialchars($q); ?>" placeholder="Masukkan judul...">
+        <input type="submit" name="submit" value="Cari" class="btn btn-primary">
+    </form>
 
     <table border="1" width="100%" style="border-collapse: collapse;">
         <thead>
@@ -77,13 +85,11 @@ $query = $db->query($sql_data);
         .pagination li { margin-right: 5px; }
         .pagination li a { padding: 8px 12px; border: 1px solid #ddd; text-decoration: none; color: #337ab7; border-radius: 4px; }
         .pagination li a.active { background-color: #337ab7; color: white; border-color: #337ab7; }
-        .pagination li a:hover:not(.active) { background-color: #eee; }
     </style>
 
     <ul class="pagination">
         <?php 
             $prev_page = ($page > 1) ? $page - 1 : 1;
-            // http_build_query memastikan page dan q digabung dengan benar (?page=1&q=keyword)
             $query_prev = http_build_query(['page' => $prev_page, 'q' => $q]);
         ?>
         <li><a href="?<?= $query_prev; ?>">&laquo; Previous</a></li>
