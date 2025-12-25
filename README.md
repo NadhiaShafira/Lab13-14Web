@@ -53,3 +53,23 @@ Menunjukkan bahwa saat berpindah halaman, hasil pencarian tetap tersimpan (Query
 Handling jika user mencari kata kunci yang tidak ada di dalam database.
 
 ![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/a10f1a0a13243c318c8de3a548b5f1c37a46ecf0/ss_prak13/05-data-kosong.png)
+
+---
+
+## 📂 Praktikum 14: Membuat Pencarian Data
+
+Pada praktikum ini, saya menyempurnakan fitur pencarian dengan mengintegrasikan filter pada query SQL menggunakan klausa `WHERE` dan `LIKE`.
+
+### 🛠️ Perubahan yang Dilakukan:
+
+1.  **Penempatan Elemen**: Menyisipkan form pencarian di antara tombol tambah data dan tabel utama.
+   
+2.  **Filter Query**: Mengubah query standar menjadi query dinamis yang mendukung pencarian kata kunci judul artikel.
+   
+3.  **Handling Submit**: Menambahkan pengecekan `isset($_GET['submit'])` untuk memicu proses pencarian.
+
+### 📸 Dokumentasi Praktikum 14
+
+#### 1. 🔍 Form Pencarian Data
+
+Implementasi form input untuk pencarian data sebelum tabel artikel.
