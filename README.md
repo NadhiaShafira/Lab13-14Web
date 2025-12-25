@@ -73,3 +73,23 @@ Pada praktikum ini, saya menyempurnakan fitur pencarian dengan mengintegrasikan 
 #### 1. 🔍 Form Pencarian Data
 
 Implementasi form input untuk pencarian data sebelum tabel artikel.
+
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/982ba404c43d3b75b2f6c4f1bd45778d01d63cf9/ss_prak14/14-01-form-pencarian.png)
+
+#### 2. ⚡ Hasil Pencarian dengan Klausa LIKE
+
+Menampilkan hasil filter data berdasarkan kata kunci yang dimasukkan.
+
+![foto]()
+
+### 3. 🔗 Verifikasi Parameter URL (Query String)
+
+ini menunjukkan bukti teknis bahwa sistem berhasil menangkap kata kunci melalui URL menggunakan metode GET.
+
+Transparansi Data: Membuktikan parameter pencarian dikirim secara jelas melalui URL (contoh: ?q=a&submit=Cari).
+
+Persistence: Menunjukkan bahwa kata kunci tetap tersimpan di URL meskipun pengguna berpindah halaman pada fitur pagination.
+
+Filter Akurat: Menjadi bukti bahwa variabel $q berhasil ditangkap untuk memicu klausa WHERE ... LIKE pada query SQL.
+
+![foto]()
