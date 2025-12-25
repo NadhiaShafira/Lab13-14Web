@@ -80,7 +80,7 @@ Implementasi form input untuk pencarian data sebelum tabel artikel.
 
 Menampilkan hasil filter data berdasarkan kata kunci yang dimasukkan.
 
-![foto]()
+![foto](https://github.com/NadhiaShafira/Lab13-14Web/blob/d2daa05354afec89a7d8a55f7870d47b68b132f4/ss_prak14/14-02-eksekusi-cari.png)
 
 ### 3. 🔗 Verifikasi Parameter URL (Query String)
 
